@@ -77,7 +77,7 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-graduates.forEach(function(grad){
+graduates.forEach((grad) => {
   universities.push(grad.university);
 })
 universities.sort();
@@ -91,7 +91,7 @@ Name email@example.com
 Log the result of your new array. */
 
 const contactInfo = [];
-contactInfo.push(graduates.map(function(grad){
+contactInfo.push(graduates.map((grad) => {
   return `${grad.first_name} ${grad.email}`;
 }));
 
@@ -100,7 +100,7 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-graduates.forEach(function(grad){
+graduates.forEach((grad) => {
   if (grad.university.includes('Uni')){
     uni.push(grad.university);
   };
@@ -132,7 +132,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-zooAnimals.forEach(function(animal){
+zooAnimals.forEach((animal) => {
   animalNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}.`)
 });
 
@@ -146,7 +146,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 
-lowerCase.push(zooAnimals.map(function(animal){
+lowerCase.push(zooAnimals.map((animal) => {
   return animal.animal_name.toLowerCase();
 }))
 
@@ -159,7 +159,7 @@ The zoos are concerned about animals with a lower population count. Find out whi
 */
 const lowerPopulation = [];
 
-lowerPopulation.push(zooAnimals.filter(function(animal){
+lowerPopulation.push(zooAnimals.filter((animal) => {
   if (animal.population < 5){
     return animal;
   }
@@ -173,7 +173,7 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = [];
-populationTotal.push(zooAnimals.reduce(function(acc, animal){
+populationTotal.push(zooAnimals.reduce((acc, animal) => {
   acc += animal.population;
   return acc;
 }, 0))
@@ -184,6 +184,8 @@ console.log(populationTotal);
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
+
+Stretch Done!
 
 */
 
