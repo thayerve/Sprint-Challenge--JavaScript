@@ -30,9 +30,11 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+
+
 2. What is the difference between a function and a method?
 
-A method is a function that lives on the prototype of another object.
+A method is a function that lives on the prototype of another object. It is a property of that object.
 
 3. What is closure?
 
@@ -51,6 +53,8 @@ Closure is a function's ability to reach outside of its own scope for context an
 
 
 5. Why do we need super() in an extended class?
+
+Super() passes the given arguments up to the constructor of the parent class to map to whatever props are on the parent, and then the child constructor takes whatever leftover props are defined in the object you passed in, and maps them into the props defined in the child constructor. It's the way to construct the properties that are defined on the parent class for the new object in the extended/child class.
 
 ## Project Set up
 
